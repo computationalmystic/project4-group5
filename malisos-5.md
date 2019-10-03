@@ -18,3 +18,5 @@ https://github.com/kylemalisos/kmvk6/blob/master/assignment-four/Software%20Engi
 3. This will allow a professor to manipulate anything for his class while a ta may only be able to grade the assignments of students he is assigned to.
 
 ## File Upload
+- Create a file upload class that will allow students to upload a file to our database and store information about when it was uploaded, by who, how big the file is, the file type and more.
+- Have methods that would upload the physical file to the database and allow the student to re download their submission and allow the professor or ta to preview the file.
