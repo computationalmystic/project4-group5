@@ -8,13 +8,10 @@ https://github.com/XiaoyiLi4320/xlgvx/blob/master/Project%202%20Design%20Focus%2
 
 ## To Do:
 
-1.  Create the database
-2.  
-3.  
 
 ## Student class
 
-- Login: A function can make student login to their own account.
+- Login: A function can make sure student login to their own account.
 
 - Upload files: A function can make student upload their document into the system.
 
@@ -29,3 +26,7 @@ https://github.com/XiaoyiLi4320/xlgvx/blob/master/Project%202%20Design%20Focus%2
 - Instructor add TA: A function allow instructors add TA in their own class.
 
 - Search students: A function allow instructor search the students in their own class.
+
+## System admin class
+
+- Admin add/remove instructor : A function allow admins add or remove the instructors. 
