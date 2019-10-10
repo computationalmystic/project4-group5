@@ -4,3 +4,13 @@ https://github.com/XiaoyiLi4320/xlgvx/blob/master/Project%202%20Design%20Focus%2
 
 To Do:
 
+Class 1: Student
+Login: 
+Upload files:
+
+Class 2: TA
+TA download the assignment:
+
+
+Class 3: Instructor
+Instructor add TA:
