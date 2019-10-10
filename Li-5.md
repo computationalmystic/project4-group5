@@ -1,16 +1,31 @@
-Team design document:
+
+# Li-5
+
+
+## Team design document
 
 https://github.com/XiaoyiLi4320/xlgvx/blob/master/Project%202%20Design%20Focus%20(team)/Project2.pdf
 
-To Do:
+## To Do:
 
-Class 1: Student
-Login: 
-Upload files:
+1.  Create the database
+2.  
+3.  
 
-Class 2: TA
-TA download the assignment:
+## Student class
 
+- Login: A function can make student login to their own account.
 
-Class 3: Instructor
-Instructor add TA:
+- Upload files: A function can make student upload their document into the system.
+
+## TA class
+
+- TA download the assignment: A function can make TA download the students' assignments.
+
+- Change grade: A function allow TA change the grade of the students' assignment.
+
+## Instructor class
+
+- Instructor add TA: A function allow instructors add TA in their own class.
+
+- Search students: A function allow instructor search the students in their own class.
