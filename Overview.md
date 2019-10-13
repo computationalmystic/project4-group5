@@ -1,7 +1,7 @@
 # Overview
 
-## System Needs
-### Set up a database that holds all info needed such as student information, course information, assignments, TAs, and instructors
+### System Needs
+  #### Set up a database that holds all info needed such as student information, course information, assignments, TAs, and instructors
 
 ## Functionality
 
