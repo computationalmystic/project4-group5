@@ -20,3 +20,6 @@
 ### Add/Remove person from course class
   1. Has a function to add a student or a TA to a course. Adds student to the cours in the database
   2. Has a function to remove a student or TA from a course. Removes the student from the course in the database
+
+## Next steps:
+First, we need to create a list of tasks, then distribute the task to each person. Second, we need to build the web server and database. We also need to design the UI interface. At the same time, we should complete the code of the class and function which we listed. In the whole process，we also need to do the test for the things. If there are mistakes, we should fix them.
