@@ -1,0 +1,12 @@
+#root {
+    width: 60%;
+    margin: auto;
+    align-items: center;
+}
+#header {
+    text-align: center;
+}
+select {
+    display: block;
+    margin: 0 auto;
+}

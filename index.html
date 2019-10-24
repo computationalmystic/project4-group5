@@ -1,0 +1,19 @@
+<!--
+    Kyle Malisos Api project
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Github Repository Viewer</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script type="text/javascript" src="script.js"></script>
+    </head>
+    <body>
+        <div id="root">
+            <h1 id="header">Github Repository Viewer</h1>
+            <select id="repo-group-select" onchange="get_repos(this.value)"></select>
+            <select id="repos" onchange="get_contributers(this.value)"></select>
+            <select id="contributers"></select>
+        </div>
+    </body>
+</html>
