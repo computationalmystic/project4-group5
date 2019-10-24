@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Repo Group Info</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0/dist/Chart.min.js"></script>
+</head>
+<body>
+    <h1 id="siteSubject">Augur Contributions</h1>
+    
+    <div class="break"></div>
+    
+    <button class="button" onclick="getRepoGroups()">View repo groups</button>
+    <div id= "textArea">
+        <textarea readonly id="groups">Repo Groups...</textarea>
+    </div>
+    
+    <div class="break"></div>
+    
+    <h2 class="groupHeaders">Repo group MHS</h2>
+    <button class="button" onclick = "getCommittersMHS()">View top committers</button>
+
+    <canvas id="firstChart"></canvas>
+    
+    <div class="break"></div>
+    
+    <script src="scripts.js"></script>
+</body>
+</html>
