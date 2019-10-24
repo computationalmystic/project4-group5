@@ -1,3 +1,13 @@
+var rg_id = [];
+var rg_name = [];
+
+var rp_id = [];
+var rp_name = [];
+var rp_tot_commits = [];
+
+var con_email = [];
+var con_commits = [];
+
 // Create a request variable and assign a new XMLHttpRequest object to it.
 var request = new XMLHttpRequest()
 
@@ -12,6 +22,7 @@ request.onload = function() {
     if (request.status >= 200 && request.status < 400) {
         document.getElementById('repo-group-select').innerHTML = ''
         
+        var i = 0;
         data.forEach(repo => {
             //console.log(repo.rg_description)
             document.getElementById('repo-group-select').innerHTML += 
@@ -20,10 +31,17 @@ request.onload = function() {
                 '">' +
                 repo.rg_name +
                 '</option>'
+            
+            rg_id[i] = repo.repo_group_id;
+            rg_name[i] = repo.rg_name;
+            i++;
         })
     } else {
         console.log('error')
     }
+
+    console.log(rg_id);
+    console.log(rg_name);
 }
 
 // Send request
@@ -45,37 +63,53 @@ function get_repos(repo_group_id) {
             document.getElementById('repos').innerHTML = ''
             document.getElementById('repos').data = repo_group_id
             
-            var i = 1
+            rp_id = [];
+            rp_name = [];
+            rp_tot_commits = [];
+            
+            var i = 0
             data.forEach(repo => {
                 //console.log(repo.rg_description)
                 document.getElementById('repos').innerHTML += 
-                    '<option id="op' + i + '" value="' + 
+                    '<option id="op' +
+                    i +
+                    '" data-commits="' + 
+                    repo.commits_all_time + 
+                    '" value="' + 
                     repo.repo_id +
                     '">' +
                     repo.repo_name +
                     '</option>'
                 
-                document.getElementById('op' + i).data = parseInt(repo.commits_all_time)
-                console.log('HERE:' + repo.commits_all_time)
+                rp_id[i] = repo.repo_id;
+                rp_name[i] = repo.repo_name;
+                rp_tot_commits[i] = repo.commits_all_time;
+                //document.getElementById('op' + i).data = repo.commits_all_time
+                //console.log('HERE:' + document.getElementById('op' + i).data)
                 i = i + 1
             })
         } else {
             console.log('error')
         }
+        console.log(rp_id);
+        console.log(rp_name);
+        console.log(rp_tot_commits);
     }
     
     repo_request.send()
 }
 
-function get_contributers(repo_id) {
+function get_contributers(option) {
     var contributer_request = new XMLHttpRequest()
-    var url = 'http://augur.osshealth.io:5000/api/unstable/repo-groups/' +                       document.getElementById('repos').data + '/repos/' + repo_id + '/top-committers'
+    var url = 'http://augur.osshealth.io:5000/api/unstable/repo-groups/' +                       rg_id[document.getElementById('repo-group-select').selectedIndex] + '/repos/' + rp_id[document.getElementById('repos').selectedIndex] + '/top-committers'
     
-    commits_all_time = document.getElementById('op' + 
-        (parseInt(document.getElementById('repos').selectedIndex) + 1)).data
+    commits_all_time = rp_tot_commits[document.getElementById('repos').selectedIndex]
     
-    console.log('op' + 
-        (parseInt(document.getElementById('repos').selectedIndex) + 1))
+    //commits_all_time = document.getElementById('op' + 
+        //(parseInt(document.getElementById('repos').selectedIndex) + 1)).data
+    
+    //console.log('op' + 
+        //(parseInt(document.getElementById('repos').selectedIndex) + 1))
     
     console.log(commits_all_time + ' ' + url)
     
@@ -89,6 +123,10 @@ function get_contributers(repo_id) {
         if (request.status >= 200 && request.status < 400) {
             document.getElementById('contributers').innerHTML = ''
 
+            con_email = [];
+            con_commits = [];
+            
+            var i = 0;
             data.forEach(contributer => {
                 //console.log(repo.rg_description)
                 document.getElementById('contributers').innerHTML += 
@@ -99,10 +137,17 @@ function get_contributers(repo_id) {
                     '</option>'
                 
                 console.log(contributer.commits + ' / ' + commits_all_time)
+                
+                con_email[i] = contributer.email
+                con_commits[i] = contributer.commits
+                
+                i++
             })
         } else {
             console.log('error')
         }
+        console.log(con_email)
+        console.log(con_commits)
     }
     
     contributer_request.send()
