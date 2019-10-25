@@ -23,7 +23,14 @@ function chart(){
                     'rgba(255, 206, 86)',
                     'rgba(75, 192, 192)',
                     'rgba(153, 102, 255)',
-                    'rgba(255, 159, 64)'
+                    'rgba(255, 159, 64)',
+                    
+                    'rgba(100, 99, 132)',
+                    'rgba(54, 162, 24)',
+                    'rgba(255, 206, 1)',
+                    'rgba(75, 13, 192)',
+                    'rgba(100, 102, 255)',
+                    'rgba(255, 14, 64)'
                 ],
             }]
         },
@@ -63,7 +70,7 @@ async function getRepoGroups(){
 }
         
 async function getCommittersMHS(){
-    commit_url = firstCom + "25152" + secCom;
+    commit_url = firstCom + "20" + secCom;
     const response = await fetch(commit_url);
     const committers = await response.json();
     console.log(committers.length);
