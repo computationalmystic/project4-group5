@@ -7,6 +7,41 @@
     margin-top: 25px;
 }
 
+.root {
+    width: 60%;
+    margin: auto;
+    align-items: center;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    color: #000000;
+    font-weight: 400;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+}
+
+#header {
+    text-align: center;
+}
+
+select {
+    display: inline block;
+    margin: 0 auto;
+    padding: 5px;
+    margin-bottom: 10px;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    color: #000000;
+    font-weight: 400;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+}
+
 #firstChart{
     height: 10px;
     width: 10px;
@@ -20,7 +55,7 @@ body{
   text-align:center;
 }
 
-#siteSubject{
+.topic{
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
     letter-spacing: 1px;
     word-spacing: 2px;
